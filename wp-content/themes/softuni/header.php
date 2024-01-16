@@ -59,14 +59,17 @@
 						</button>
 					</div>
 
-					<div class="collapse navbar-collapse" id="site-nav-bar">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="./">Home</a></li>
-							<li><a href="./about">About</a></li>
-							<li><a href="shop.php">Shop</a></li>
-							<li><a href="faq.php">FAQ</a></li>
-							<li><a href="contact.php">Contact</a></li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
+					<?php
+					wp_nav_menu(
+						array(
+							'menu'           => 'primary-menu',
+							'menu_id'        => 'site-nav-bar',
+							'theme_location' => 'primary_menu',
+							'menu_class' => 'nav navbar-nav',
+							'container_class' => 'collapse navbar-collapse',
+						)
+					)
+					?>
+
 				</nav>
 			</div>
