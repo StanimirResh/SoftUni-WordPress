@@ -24,7 +24,7 @@ function load_assets($hook) {
 	wp_enqueue_style('bootstrap.min-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false, '1.0.0');
 	wp_enqueue_style('ionicons.css', get_template_directory_uri() . '/assets/css/ionicons.css', false, '1.0.0');
 	wp_enqueue_style('magnific-popup.css', get_template_directory_uri() . '/assets/css/magnific-popup.css', false, '1.0.0');
-	wp_enqueue_style('main.css', get_template_directory_uri() . '/assets/css/main.css', false, '1.0.5');
+	wp_enqueue_style('main.css', get_template_directory_uri() . '/assets/css/main.css', false, '1.0.6');
 	wp_enqueue_style('owl.carousel.css', get_template_directory_uri() . '/assets/css/owl.carousel.css', false, '1.0.0');
 	wp_enqueue_style('owl.carousel.theme.min.css', get_template_directory_uri() . '/assets/css/owl.carousel.theme.min.css', false, '1.0.0');
 }

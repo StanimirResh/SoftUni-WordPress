@@ -754,3 +754,7 @@ p {
 .navbar-collapse .current-menu-item a {
     color: #fabe12 !important ;
 }
+
+.center {
+    text-align: center;
+}

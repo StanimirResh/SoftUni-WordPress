@@ -22,11 +22,20 @@
 			get_template_part('partials/content', 'post')
 			?>
 
+
 		<?php endwhile; ?>
+		<div class="center">
+			<?php
+			the_posts_pagination(array(
+				'mid_size' => 2,
+				'prev_text' => __('Back', 'textdomain'),
+				'next_text' => __('Onward', 'textdomain'),
+			));
+			?>
+		</div>
 	<?php else : ?>
 		Sorry, there is no posts here.
 	<?php endif; ?>
 </section>
-
 
 <?php get_footer(); ?>
