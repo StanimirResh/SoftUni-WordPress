@@ -7,7 +7,6 @@
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) :
 			the_post(); ?>
-
 			<div class="container page-bgc">
 				<div class="row">
 					<div class="col-sm-12">
