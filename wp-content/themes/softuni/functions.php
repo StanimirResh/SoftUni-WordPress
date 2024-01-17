@@ -1,5 +1,8 @@
 <?php
 
+add_theme_support('post-thumbnails');
+
+
 /**
  * Load all the assets
  * 
