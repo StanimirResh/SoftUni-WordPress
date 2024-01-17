@@ -1,7 +1,9 @@
 <?php
 
 /**
- * Never worry about cache again!
+ * Load all the assets
+ * 
+ * @return void
  */
 function load_assets($hook) {
 	// create my own version codes
@@ -28,7 +30,11 @@ function load_assets($hook) {
 }
 add_action('wp_enqueue_scripts', 'load_assets');
 
-
+/**
+ * Add the menus.
+ * 
+ * @return void
+ */
 function softuni_register_nav_menus() {
 	register_nav_menus(
 		array(
@@ -41,3 +47,60 @@ function softuni_register_nav_menus() {
 }
 
 add_action('after_setup_theme', 'softuni_register_nav_menus');
+
+
+/**
+ * Add a sidebar.
+ * 
+ * @return void
+ */
+function register_footer_widgets() {
+	register_sidebar(
+		array(
+			'id'            => 'footer-1',
+			'name'          => __('Footer 01'),
+			'description'   => __('The description of my sidebar'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'footer-2',
+			'name'          => __('Footer 02'),
+			'description'   => __('The description of my sidebar'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'footer-3',
+			'name'          => __('Footer 03'),
+			'description'   => __('The description of my sidebar'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'footer-4',
+			'name'          => __('Footer 04'),
+			'description'   => __('The description of my sidebar'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+}
+add_action('widgets_init', 'register_footer_widgets');

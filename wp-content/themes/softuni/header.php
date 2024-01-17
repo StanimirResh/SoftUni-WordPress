@@ -26,7 +26,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<a href="index.html"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png' ?>" alt="logo"></a>
+					<a href=<?php echo get_home_url(); ?>><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png' ?>" alt="logo"></a>
 				</div>
 				<div class="col-sm-3 col-sm-offset-3 text-right">
 					<span class="ion-android-cart"></span> 0 products
