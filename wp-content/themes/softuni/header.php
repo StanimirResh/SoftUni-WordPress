@@ -45,7 +45,7 @@
 
 	<!-- Header -->
 
-	<section id="header" class="main-header">
+	<section id="header" class="main-header faq-header inner-header">
 		<div class="container">
 
 			<div class="row">
