@@ -26,4 +26,27 @@ function show_post_title_by_id($atts) {
 
     return $title;
 }
+
 add_shortcode('show_post_title', 'show_post_title_by_id');
+
+
+/**
+ * AJAX Call handler function for adding a like
+ * 
+ * @return void
+ */
+function robots_like() {
+
+    $post_id = esc_attr($_POST['post_id']);
+
+    $likes_number = get_post_meta($post_id, 'likes', true);
+
+    if (empty($likes_number)) {
+        $likes_number = 1;
+    }
+
+    update_post_meta($post_id, 'likes', $likes_number + 1);
+}
+
+add_action('wp_ajax_nopriv_robots_like', 'robots_like');
+add_action('wp_ajax_robots_like', 'robots_like');

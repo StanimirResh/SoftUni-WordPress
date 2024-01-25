@@ -24,6 +24,9 @@
                         </p>
                     </div>
                 </div>
+                <div class="like-button">
+                    <a class="robots-like" href="javascript:void(0)" data-post-id="<?php echo get_the_ID() ?>">Like me <?php echo get_post_meta(get_the_ID(), 'likes', true) ?></a>
+                </div>
             </div>
         <?php endwhile; ?>
     <?php else : ?>

@@ -38,3 +38,10 @@ require ROBOTS_INCLUDE . '/cpt-robots.php';
 require ROBOTS_INCLUDE . '/functions.php';
 
 
+function su_robots_enqueue() {
+
+    wp_enqueue_script('robots-script', plugins_url('assets/js/like.js', __FILE__), array('jquery'), 1.5);
+
+    wp_localize_script('robots-script', 'my_ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+}
+add_action('wp_enqueue_scripts', 'su_robots_enqueue');
