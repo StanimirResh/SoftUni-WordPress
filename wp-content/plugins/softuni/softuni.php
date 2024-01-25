@@ -29,20 +29,12 @@
  * root, if we need some
  */
 
-/**
- * CPT - Robots
- * Custom taxonomy
- * Single view of the CPT
- * Settings/option page
- */
 
 if (!defined('ROBOTS_INCLUDE')) {
     define('ROBOTS_INCLUDE', plugin_dir_path(__FILE__) . 'includes');
 }
 
 require ROBOTS_INCLUDE . '/cpt-robots.php';
+require ROBOTS_INCLUDE . '/functions.php';
 
-// include_once 'includes/cpt-robots-test.php';
 
-// require '';
-// require_once '';
